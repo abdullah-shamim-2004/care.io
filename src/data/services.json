@@ -35,7 +35,7 @@
     "description": "Specialized care for newborns including feeding assistance, sleep monitoring, and hygiene support.",
     "pricePerHour": 500,
     "pricePerDay": 4000,
-    "image": "https://i.ibb.co/baby-care-3.jpg",
+    "image": "https://i.ibb.co.com/j9zHh49v/A-warm-and-realistic-babysitti.jpg",
     "features": ["Newborn specialist", "Hygiene care", "24/7 support"],
     "available": true
   },
@@ -48,7 +48,7 @@
     "description": "Basic elderly care service providing companionship and daily activity assistance at home.",
     "pricePerHour": 320,
     "pricePerDay": 2600,
-    "image": "https://i.ibb.co/elderly-care-1.jpg",
+    "image": "https://i.ibb.co.com/FkrnnKQB/A-warm-and-realistic-elderly-c.jpg",
     "features": ["Daily assistance", "Friendly caregiver", "Health check"],
     "available": true
   },
@@ -60,7 +60,7 @@
     "description": "Premium care service with trained professionals for medical monitoring and emergency response.",
     "pricePerHour": 480,
     "pricePerDay": 3800,
-    "image": "https://i.ibb.co/elderly-care-2.jpg",
+    "image": "https://i.ibb.co.com/FkrnnKQB/A-warm-and-realistic-elderly-c.jpg",
     "features": [
       "Medical support",
       "Medication management",
@@ -76,7 +76,7 @@
     "description": "Non-medical companionship service focused on emotional support and daily activities.",
     "pricePerHour": 280,
     "pricePerDay": 2200,
-    "image": "https://i.ibb.co/elderly-care-3.jpg",
+    "image": "https://i.ibb.co.com/FkrnnKQB/A-warm-and-realistic-elderly-c.jpg",
     "features": [
       "Emotional support",
       "Daily activities",
@@ -93,7 +93,7 @@
     "description": "Basic care service for sick patients requiring assistance during recovery.",
     "pricePerHour": 350,
     "pricePerDay": 2800,
-    "image": "https://i.ibb.co/sick-care-1.jpg",
+    "image": "https://i.ibb.co.com/BVPZ9NxG/A-realistic-and-professional-c.jpg",
     "features": ["Recovery support", "Daily assistance", "Care supervision"],
     "available": true
   },
@@ -105,7 +105,7 @@
     "description": "Post surgery care with trained caregivers providing medical and personal support.",
     "pricePerHour": 500,
     "pricePerDay": 4200,
-    "image": "https://i.ibb.co/sick-care-2.jpg",
+    "image": "https://i.ibb.co.com/BVPZ9NxG/A-realistic-and-professional-c.jpg",
     "features": ["Medical monitoring", "Wound care", "Medication assistance"],
     "available": true
   },
@@ -117,7 +117,7 @@
     "description": "Specialized long-term care for patients with chronic diseases at home.",
     "pricePerHour": 520,
     "pricePerDay": 4500,
-    "image": "https://i.ibb.co/sick-care-3.jpg",
+    "image": "https://i.ibb.co.com/BVPZ9NxG/A-realistic-and-professional-c.jpg",
     "features": ["Long-term support", "Disease management", "Skilled nurses"],
     "available": true
   },
@@ -146,7 +146,7 @@
     "description": "Professional care services for physically or mentally disabled persons at home.",
     "pricePerHour": 480,
     "pricePerDay": 4000,
-    "image": "https://i.ibb.co/disabled-care.jpg",
+    "image": "https://i.ibb.co.com/BVPZ9NxG/A-realistic-and-professional-c.jpg",
     "features": ["Special training", "Daily assistance", "Respectful care"],
     "available": true
   },

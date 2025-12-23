@@ -13,13 +13,13 @@ const ServicesOverview = () => {
             key={category.id}
             className=" rounded-lg shadow-md p-5 text-center hover:shadow-xl"
           >
-            {/* <Image
-              width={200}
-              height={250}
+            <Image
+              width={100}
+              height={80}
               src={category.image}
               alt={category.title}
               className="h-40 w-full object-cover rounded"
-            /> */}
+            />
 
             <h3 className="text-xl font-semibold mt-4">{category.title}</h3>
 
