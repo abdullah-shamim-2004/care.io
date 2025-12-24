@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import SocialButtons from "./SocialButtons";
+import { postUser } from "@/actions/server/auth";
 
 const RegisterForm = () => {
   const router = useRouter();
@@ -17,18 +18,22 @@ const RegisterForm = () => {
     formState: { errors, isSubmitting },
   } = useForm();
 
-  const onSubmit = async (data) => {
-    try {
-      console.log("Register Data:", data);
+const onSubmit = async (data) => { 
+  try {
+    const result = await postUser(data);
+    console.log(result);
 
-      // 🔹 backend api call here
-      // await fetch("/api/register", {...})
-
-    //   router.push(callback); // redirect to booking
-    } catch (error) {
-      console.error(error);
+    if (result.success) {
+      router.push(callback);
+    } else {
+      alert(result.message || "Registration failed");
     }
-  };
+  } catch (error) {
+    console.error(error);
+    // alert("Something went wrong!");
+  }
+};
+
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-base-200 px-4">

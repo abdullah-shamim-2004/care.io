@@ -1,38 +1,48 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
+
 const uri = process.env.MONGODB_URI;
-const dbname = process.env.DB_NAME;
-// error handaling
-if (!uri || !dbname) {
-  throw new Error("Please add your mongodb uri in env file.");
+const dbName = process.env.DB_NAME;
+
+if (!uri || !dbName) {
+  throw new Error("Please add your MongoDB URI and DB_NAME in the env file.");
 }
+
+// Collection names
 export const collections = {
   SERVICES: "services",
+  USERS: "users",
 };
 
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  },
-});
-let db = null;
-// connect with database
+// MongoClient singleton
+let client;
+let db;
+
 const connectDB = async () => {
-  if (db) return db;
+  if (db) return db; // return existing db
+
+  if (!client) {
+    client = new MongoClient(uri, {
+      serverApi: {
+        version: ServerApiVersion.v1,
+        strict: true,
+        deprecationErrors: true,
+      },
+    });
+  }
+
   try {
     await client.connect();
     console.log("MongoDB connected.");
-    db = client.db(dbname);
+    db = client.db(dbName);
     return db;
   } catch (error) {
     console.error("MongoDB connection failed", error);
     throw error;
   }
 };
-// Get collection
-export const dbConnect = async (collectionname) => {
-  const database = await connectDB();
-  return database.collection(collectionname);
+
+// Return a collection ready to use
+export const dbConnect = async (collectionName) => {
+  const database = await connectDB(); 
+  return database.collection(collectionName);
 };
