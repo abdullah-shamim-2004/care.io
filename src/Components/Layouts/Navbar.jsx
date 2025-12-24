@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "./Logo";
 import Link from "next/link";
 import NavLink from "../buttons/NavLink";
+import AuthButtons from "../buttons/AuthButtons";
 // import NavLink from "../buttons/NavLink";
 // import { FiShoppingCart } from "react-icons/fi";
 // import AuthButtons from "../buttons/AuthButtons";
@@ -57,7 +58,9 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{nav}</ul>
         </div>
-        <div className="navbar-end space-x-4"></div>
+        <div className="navbar-end space-x-4">
+          <AuthButtons></AuthButtons>
+        </div>
       </div>
     </div>
   );

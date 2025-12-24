@@ -26,7 +26,8 @@ const ServicesOverview = () => {
             <p className="text-gray-600 mt-2">{category.description}</p>
 
             <Link
-              href={`/services?category=${category.id}`}
+              href={"/services"}
+              //   href={`/services?category=${category.id}`}
               className="inline-block btn-primary mt-4 btn btn-outline  px-5 py-2 rounded"
             >
               View Services

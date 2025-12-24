@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 const ServiceCard = ({ service }) => {
-  const { id, name, category, shortDescription, pricePerHour, image } = service;
+  const { _id, name, category, shortDescription, pricePerHour, image } =
+    service;
 
   return (
     <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group">
@@ -37,7 +38,7 @@ const ServiceCard = ({ service }) => {
           </p>
 
           <Link
-            href={`/services/${id}`}
+            href={`/services/${_id}`}
             className="text-sm font-medium text-white bg-primary px-4 py-2 rounded-lg hover:bg-blue-700 transition"
           >
             Details
