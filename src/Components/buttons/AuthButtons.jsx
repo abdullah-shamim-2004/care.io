@@ -1,5 +1,5 @@
 "use client";
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import React from "react";
 
@@ -9,9 +9,9 @@ const AuthButtons = () => {
     <div>
       {session.status == "authenticated" ? (
         <>
-          <Link href={"/"}>
-            <button className="btn btn-primary ">LogOut</button>
-          </Link>
+          <button onClick={() => signOut()} className="btn btn-primary ">
+            LogOut
+          </button>
         </>
       ) : (
         <>
