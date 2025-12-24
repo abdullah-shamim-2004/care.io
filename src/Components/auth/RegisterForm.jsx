@@ -6,6 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import SocialButtons from "./SocialButtons";
 import { postUser } from "@/actions/server/auth";
+import { signIn } from "next-auth/react";
 
 const RegisterForm = () => {
   const router = useRouter();
@@ -18,22 +19,27 @@ const RegisterForm = () => {
     formState: { errors, isSubmitting },
   } = useForm();
 
-const onSubmit = async (data) => { 
-  try {
-    const result = await postUser(data);
-    console.log(result);
+  const onSubmit = async (data) => {
+    try {
+      const result = await postUser(data);
+      // console.log(result);
 
-    if (result.success) {
-      router.push(callback);
-    } else {
-      alert(result.message || "Registration failed");
+      if (result.success) {
+        const result = await signIn("credentials", {
+          email: data.email,
+          password: data.password,
+          redirect: false,
+        });
+
+        router.push(callback);
+      } else {
+        alert(result.message || "Registration failed");
+      }
+    } catch (error) {
+      console.error(error);
+      // alert("Something went wrong!");
     }
-  } catch (error) {
-    console.error(error);
-    // alert("Something went wrong!");
-  }
-};
-
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-base-200 px-4">

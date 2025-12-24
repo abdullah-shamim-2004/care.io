@@ -1,11 +1,19 @@
 "use client";
+
 import React from "react";
-// import { FaGoogle } from "react-icons/fa";
+import { toast, ToastContainer } from "react-toastify";
+const handleLogin = () => {
+  toast("Sorry developer don't impliment Google Authentacation.");
+};
 
 const SocialButtons = () => {
   return (
     <div>
-      <button className="btn bg-white text-black border-[#e5e5e5] w-full">
+      <ToastContainer></ToastContainer>
+      <button
+        onClick={handleLogin}
+        className="btn bg-white text-black border-[#e5e5e5] w-full"
+      >
         <svg
           aria-label="Google logo"
           width="16"

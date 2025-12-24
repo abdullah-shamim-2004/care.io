@@ -6,7 +6,7 @@ import { useSession } from "next-auth/react";
 
 const BookingForm = ({ service }) => {
   const { data: session } = useSession();
-    console.log(session);
+    // console.log(session);
 
   const [durationType, setDurationType] = useState("hour");
   const [duration, setDuration] = useState(1);
