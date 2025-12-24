@@ -1,4 +1,5 @@
 import { getSingleService } from "@/actions/server/service";
+import BookingButton from "@/Components/buttons/BookingButton";
 import Image from "next/image";
 
 const ServiceDetailsPage = async ({ params }) => {
@@ -59,7 +60,7 @@ const ServiceDetailsPage = async ({ params }) => {
         </p>
       </div>
       <div>
-        <button className="btn btn-primary btn-outline ">Book Service</button>
+        <BookingButton service={service}></BookingButton>
       </div>
     </div>
   );

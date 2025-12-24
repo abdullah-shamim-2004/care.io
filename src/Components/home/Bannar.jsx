@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { bannerData } from "@/data/bannerdata";
+import { bannerData } from "@/data/bannerData";
 import Image from "next/image";
 
 const Bannar = () => {

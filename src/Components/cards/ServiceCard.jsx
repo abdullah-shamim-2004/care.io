@@ -18,7 +18,7 @@ const ServiceCard = ({ service }) => {
         />
 
         {/* Category Badge */}
-        <span className="absolute top-3 left-3 bg-blue-600 text-white text-xs px-3 py-1 rounded-full">
+        <span className="absolute top-3 left-3 bg-secondary text-white text-xs px-3 py-1 rounded-full">
           {category}
         </span>
       </div>
@@ -33,7 +33,7 @@ const ServiceCard = ({ service }) => {
 
         {/* Price */}
         <div className="flex items-center justify-between mt-4">
-          <p className="text-lg font-bold text-blue-600">
+          <p className="text-lg font-bold text-secondary">
             ৳ {pricePerHour} / hour
           </p>
 

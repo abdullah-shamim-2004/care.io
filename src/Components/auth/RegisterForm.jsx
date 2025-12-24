@@ -24,7 +24,7 @@ const RegisterForm = () => {
       // 🔹 backend api call here
       // await fetch("/api/register", {...})
 
-      router.push(callback); // redirect to booking
+    //   router.push(callback); // redirect to booking
     } catch (error) {
       console.error(error);
     }
